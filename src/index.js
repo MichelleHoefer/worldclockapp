@@ -24,6 +24,16 @@ function updateTime() {
 
   tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
   tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
+
+  let ulaanbaatarElement = document.querySelector("#ulaanbaatar");
+  let ulaanbaatarDateElement = ulaanbaatarElement.querySelector(".date");
+  let ulaanbaatarTimeElement = ulaanbaatarElement.querySelector(".time");
+  let ulaanbaatarTime = moment().tz("Asia/Ulaanbaatar");
+
+  ulaanbaatarDateElement.innerHTML = ulaanbaatarTime.format("MMMM Do YYYY");
+  ulaanbaatarTimeElement.innerHTML = ulaanbaatarTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
